@@ -390,13 +390,51 @@ template {
 }
 
 /* line 15, ../Code/Techdegree-Project-5/scss/components/_layout.scss */
-.gallery a {
+.img_cell {
   flex: 0 0 auto;
+  position: relative;
   height: 200px;
   margin: 0 24px 3rem;
 }
 
-/* line 21, ../Code/Techdegree-Project-5/scss/components/_layout.scss */
+/* line 20, ../Code/Techdegree-Project-5/scss/components/_layout.scss */
+.img_cell-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  transition: background-color .3s ease-in;
+}
+
+/* line 28, ../Code/Techdegree-Project-5/scss/components/_layout.scss */
+.img_cell-overlay span {
+  position: absolute;
+  top: 50%;
+  margin-top: -18px;
+  left: 50%;
+  margin-left: -73.055px;
+  padding: 0.5rem;
+  border: 1px solid #000;
+  border-radius: 0.25rem;
+  opacity: 0;
+  background-color: white;
+  color: #000;
+  transition: opacity .3s ease-in .1s;
+}
+
+/* line 43, ../Code/Techdegree-Project-5/scss/components/_layout.scss */
+.img_cell:hover .img_cell-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* line 45, ../Code/Techdegree-Project-5/scss/components/_layout.scss */
+.img_cell:hover .img_cell-overlay span {
+  opacity: 1;
+}
+
+/* line 51, ../Code/Techdegree-Project-5/scss/components/_layout.scss */
 header input {
   display: block;
   width: 25%;
