@@ -1,0 +1,28 @@
+/* Layout Styles */
+
+.lg_img {
+	display: none;
+}
+
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	max-width: 992px;
+	margin: auto;
+}
+
+.gallery a {
+	flex: 0 0 auto;
+	height: 200px;
+	margin: 0 24px 3rem;
+}
+
+header input {
+	display: block;
+	width: 25%;
+	margin: 1.5rem auto;
+	padding: 0.5rem;
+	border-radius: 0.25rem;
+	border: 1px solid #ccc;
+}

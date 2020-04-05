@@ -374,6 +374,38 @@ template {
 }
 
 /* Components Imports */
+/* Layout Styles */
+/* line 3, ../Code/Techdegree-Project-5/scss/components/_layout.scss */
+.lg_img {
+  display: none;
+}
+
+/* line 7, ../Code/Techdegree-Project-5/scss/components/_layout.scss */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 992px;
+  margin: auto;
+}
+
+/* line 15, ../Code/Techdegree-Project-5/scss/components/_layout.scss */
+.gallery a {
+  flex: 0 0 auto;
+  height: 200px;
+  margin: 0 24px 3rem;
+}
+
+/* line 21, ../Code/Techdegree-Project-5/scss/components/_layout.scss */
+header input {
+  display: block;
+  width: 25%;
+  margin: 1.5rem auto;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid #ccc;
+}
+
 /* Utilities Imports */
 
 /*# sourceMappingURL=styles.css.map */
