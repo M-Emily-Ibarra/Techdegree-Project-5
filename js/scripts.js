@@ -78,21 +78,25 @@ const photos = [
 	],
 ];
 
-function photoCell(arr) {
+let photoCell = (cell) => {
+		return `
+		<a class="img_cell">
+			<img src="${cell[0]}" alt="${cell[1]}">
+			<div class="img_cell-overlay"><span>Click for large view</span></div>
+		</a>
+		<figure class="lg_img">
+			<img src="${cell[2]}" alt="${cell[1]}">
+			<figcaption>${cell[3]}</figcaption>
+		</figure>
+	`;
+}
+
+function generateGallery(arr) {
 	let cell = '';
 	for ( let i = 0; i < arr.length; i++ ) {
-		cell += `
-			<a class="img_cell">
-				<img src="${arr[i][0]}" alt="${arr[i][1]}">
-				<div class="img_cell-overlay"><span>Click for large view</span></div>
-			</a>
-			<figure class="lg_img">
-				<img src="${arr[i][2]}" alt="${arr[i][1]}">
-				<figcaption>${arr[i][3]}</figcaption>
-			</figure>
-		`;
+		cell += photoCell(arr[i]);
 	}
 	return cell;
 }
 
-showPhoto( photoCell(photos) );
+showPhoto( generateGallery(photos) );
